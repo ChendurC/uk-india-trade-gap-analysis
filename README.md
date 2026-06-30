@@ -1,42 +1,81 @@
-# uk-india-trade-gap-analysis
 # 🇬🇧 UK–India Trade Gap Analysis
 
-Analysing what the UK imports from the world that India isn't supplying — identifying trade opportunities in the context of the 2025 UK-India Free Trade Agreement.
+> **What does the UK buy from the world that India isn't supplying enough of?**
+
+This project analyses $400B+ of UK import data to identify the largest product categories where India holds less than 5% market share — and quantifies the opportunity gap.
+
+Built as a portfolio project targeting Data Analyst / Data Engineer roles in the UK.
+
+---
 
 ## 📊 Live Dashboards
 - **Tableau Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/chendur.murugan.cheran/viz/Uk-IndiaTrade/Dashboard1)
 - **Streamlit App:** Run locally (see below)
 
-## 🔍 Key Findings
-| Category | UK Imports (World) | India's Supply | Gap |
-|---|---|---|---|
-| Automobiles & Vehicles | $62.5B | $0.1B | $62.4B |
-| Machinery & Computers | $58.3B | $0.8B | $57.5B |
-| Gems & Precious Metals | $45.2B | $2.1B | $43.1B |
+---
 
-## 🛠 Tech Stack
+## 🔍 Key Finding
+
+The UK imports **$400.7B** of goods annually. India supplies only **$12.5B** of that — leaving a **$388.2B gap**. The three biggest under-represented categories:
+
+| Category | UK Imports | India's Share |
+|---|---|---|
+| Automobiles & Vehicles | $62.5B | 0.16% |
+| Machinery & Computers | $58.3B | 1.37% |
+| Electrical Equipment | $42.1B | 1.43% |
+
+---
+
+## 🛠️ Tech Stack
+
 | Tool | Purpose |
 |---|---|
 | Python & Pandas | Data pipeline & cleaning |
 | Streamlit & Plotly | Interactive web dashboard |
 | Tableau | Advanced visualisations |
-| Git & GitHub | Version control |
+| Git & GitHub | Version control & portfolio |
+
+---
 
 ## 🚀 How to Run
+
+**1. Clone the repo**
 ```bash
-# 1. Clone the repo
-git clone https://github.com/chendurmurugan/uk-india-trade-gap-analysis
+git clone https://github.com/ChendurC/uk-india-trade-gap-analysis
+cd uk-india-trade-gap-analysis
+```
 
-# 2. Install dependencies
-pip install streamlit pandas plotly
+**2. Install dependencies**
+```bash
+pip install pandas streamlit plotly requests
+```
 
-# 3. Generate data
+**3. Generate the data**
+```bash
 python pipeline/fetch_data.py
+```
 
-# 4. Run dashboard
+**4. Launch the dashboard**
+```bash
 streamlit run dashboard/app.py
 ```
 
+---
+
+## 💡 Insights
+
+- **Automobiles**: India has a massive manufacturing base (Tata, Mahindra) but exports almost no cars to the UK. The 2025 India-UK FTA could change this.
+- **Pharmaceuticals**: India already supplies ~5% but given its generic drug dominance, this is still underweight.
+- **Clothing & Apparel**: India's highest market share (8.76%) — yet Bangladesh and China still dominate. FTA tariff cuts could shift this significantly.
+
+---
+
 ## 👤 Author
-**Chendur Murugan Cheran** | MSc Business Analytics, University of Exeter  
-[GitHub](https://github.com/chendurmurugan) | [LinkedIn](https://linkedin.com/in/chendurmurugan)
+
+**Chendur Murugan Cheran** — MSc Business Analytics, University of Exeter  
+Previously: Software Engineer @ IQVIA (2.7 years)  
+[LinkedIn](https://linkedin.com/in/chendurmurugan) | [GitHub](https://github.com/chendurmurugan)
+
+---
+
+*Data source: UN Comtrade & UK ONS Trade Statistics (2023)*
